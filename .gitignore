@@ -1,0 +1,11 @@
+__pycache__/
+
+# Local virtual environment
+.venv/
+
+# Everything the program creates (logs, recalculated turn-ins, check workbooks, JSON results)
+Working/
+logs/
+.claude/
+Testing/
+Working/

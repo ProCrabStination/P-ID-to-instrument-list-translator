@@ -1,0 +1,27 @@
+# Automatic Starter Selection - Python package requirements
+# Install with:  python -m pip install -r requirements.txt
+#
+# Not pip packages, but also required:
+#   - Python 3.14 (tkinter is included with the standard Windows installer)
+#   - Microsoft Excel (TurnIn_Extraction reads the turn-in through Excel, read-only, so formulas are recalculated)
+#   - Claude Code CLI, if a "Claude Code:" model is used for drawing parsing
+
+# Main program (GUI.py, Main.py, Starter_Extraction.py, TurnIn_Extraction.py, Starter_Selection.py,
+#               Pid_Instruments.py, Pdf_Shapes_OCR.py, Pdf_Connections.py, Connection_Viewer.py, Ocr_Audit.py)
+ttkthemes==3.3.0    # dark "black" window theme; GUI falls back to the plain look without it
+openpyxl==3.1.5     # cell/date helpers, and reads the turn-in read-only if Excel is unavailable (also used by the submodule)
+pymupdf==1.28.2     # P&ID vector shapes, text and page images (also used by the submodule)
+rapidocr==3.10.0    # OCR of the P&ID lettering and inside shapes (also installed with docling)
+onnxruntime==1.30.0 # runs RapidOCR's models (also used by the submodule)
+numpy==2.5.5        # page images for OCR
+requests==2.34.2    # lists local Ollama models in the P&ID options window (also used by the submodule)
+pillow==12.3.0      # images in the OCR audit window (also used by the submodule)
+
+# Submodule: Drawing-to-instrument-list-translator (P&ID / drawing parsing)
+pandas==3.0.6
+docling==2.97.0
+docling-core==2.78.1
+ocrmypdf==17.13.0
+ollama==0.6.3
+pdfconverter==1.0.1
+pptxtopdf==0.0.2
